@@ -2,168 +2,111 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-   >
+    android:orientation="vertical">
 
-
-    <android.support.v7.widget.CardView
-    android:layout_width="match_parent"
-    android:layout_height="70dp"
-    android:id="@+id/cv1"
-    >
-    <RelativeLayout
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/scheduleList"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Sunday"
-            android:id="@+id/tv1"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"/>
-
-    </RelativeLayout>
-    
+        android:layout_height="match_parent"
+        android:scrollbars="vertical" />
 
 
-</android.support.v7.widget.CardView>
-
-
-
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:id="@+id/cv2"
-        >
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Monday"
-                android:id="@+id/tv2"
-                android:layout_marginTop="10dp"
-               />
-
-        </RelativeLayout>
-
-
-
-    </android.support.v7.widget.CardView>
-
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:id="@+id/cv3"
-        >
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Tuesday"
-                android:id="@+id/tv3"
-                android:layout_marginTop="10dp"
-                />
-
-        </RelativeLayout>
-
-
-
-    </android.support.v7.widget.CardView>
-
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:id="@+id/cv4"
-        >
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Wednesday"
-                android:id="@+id/tv4"
-                android:layout_marginTop="10dp"
-                />
-
-        </RelativeLayout>
-
-
-
-    </android.support.v7.widget.CardView>
-
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:id="@+id/cv5"
-        >
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Thursday"
-                android:id="@+id/tv5"
-                android:layout_marginTop="10dp"
-                />
-
-        </RelativeLayout>
-
-
-
-    </android.support.v7.widget.CardView>
-
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:id="@+id/cv6"
-        >
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Friday"
-                android:id="@+id/tv6"
-                android:layout_marginTop="10dp"
-                />
-
-        </RelativeLayout>
-    </android.support.v7.widget.CardView>
-
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:id="@+id/cv7"
-        >
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Saturday"
-                android:id="@+id/tv7"
-                android:layout_marginTop="10dp"
-                />
-
-        </RelativeLayout>
-
-
-
-    </android.support.v7.widget.CardView>
 </LinearLayout>
+
+
+    <!--
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/sundayColor"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
+                android:text="S"
+                android:textColor="@color/white"
+                android:textSize="36sp" />
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/mondayColor"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
+                android:text="M"
+                android:textColor="@color/white"
+                android:textSize="36sp" />
+
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/tuesdayColor"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
+                android:text="Tu"
+                android:textColor="@color/white"
+                android:textSize="36sp" />
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/wednesdayColor"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
+                android:text="W"
+                android:textColor="@color/white"
+                android:textSize="36sp" />
+
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/thursdayColor"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
+                android:text="Th"
+                android:textColor="@color/white"
+                android:textSize="36sp" />
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/fridayColor"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
+                android:text="F"
+                android:textColor="@color/white"
+                android:textSize="36sp" />
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/saturdayColor"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
+                android:text="Sa"
+                android:textColor="@color/white"
+                android:textSize="36sp" />
+
+
+        </LinearLayout>
+    -->
+

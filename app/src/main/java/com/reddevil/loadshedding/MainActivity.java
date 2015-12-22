@@ -1,5 +1,6 @@
 package com.reddevil.loadshedding;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -9,6 +10,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     ViewPager pager;
@@ -34,6 +36,21 @@ public class MainActivity extends AppCompatActivity {
         });*/
 
         //creating the view pager adapter
+        Typeface customFonts = Typeface.createFromAsset(getAssets(),"fonts/OpenSans-Light.ttf");
+        TextView timeRemaining = (TextView) findViewById(R.id.time_remaining_label);
+        TextView hours = (TextView) findViewById(R.id.hours);
+        TextView minutes = (TextView) findViewById(R.id.minutes);
+        TextView seconds = (TextView) findViewById(R.id.seconds);
+
+        timeRemaining.setTypeface(customFonts);
+        hours.setTypeface(customFonts);
+        minutes.setTypeface(customFonts);
+        seconds.setTypeface(customFonts);
+
+
+
+
+
 
         adapter = new ViewPagerAdapter(getSupportFragmentManager(),Titles,NumbOfTabs);
         //assingning view pager view and setting the adapter
@@ -41,19 +58,20 @@ public class MainActivity extends AppCompatActivity {
         pager.setAdapter(adapter);
 
         //assiging the sliding tab layout view
-        tabs = (SlidingTabLayout)findViewById(R.id.tabs);
-        tabs.setDistributeEvenly(true);          // this makes the tabs space evenly in available width
+        //tabs = (SlidingTabLayout)findViewById(R.id.tabs);
+        //tabs.setDistributeEvenly(true);          // this makes the tabs space evenly in available width
+
 
         //setting Custom Color for the Scroll bar indicator of the Tab View
-        tabs.setCustomTabColorizer(new SlidingTabLayout.TabColorizer() {
-            @Override
-            public int getIndicatorColor(int position) {
-                return getResources().getColor(R.color.tabsSrollColor);
-            }
-        });
+//        tabs.setCustomTabColorizer(new SlidingTabLayout.TabColorizer() {
+//            @Override
+//            public int getIndicatorColor(int position) {
+//                return getResources().getColorStateList(R.color.selector);
+//            }
+//        });
 
         //setting the view pager for the slidingtabslayout
-        tabs.setViewPager(pager);
+        //tabs.setViewPager(pager);
 
 
     }
