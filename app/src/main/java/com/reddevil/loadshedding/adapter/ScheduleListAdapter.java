@@ -1,12 +1,13 @@
-package com.reddevil.loadshedding;
+package com.reddevil.loadshedding.adapter;
 
-import android.app.ActionBar;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.reddevil.loadshedding.R;
 
 /**
  * Created by Sherlock on 12/21/2015.
